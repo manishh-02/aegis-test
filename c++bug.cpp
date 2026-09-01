@@ -5,7 +5,8 @@ int main() {
     char src[] = "This string is too long";
     char dest[5];
 
-    strcpy(dest, src);   // buffer overflow risk
+    strncpy(dest, src, sizeof(dest) - 1);
+    dest[sizeof(dest) - 1] = '\0';
 
     int* arr = new int[5];
     for (int i = 0; i <= 5; i++) {
