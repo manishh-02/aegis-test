@@ -8,7 +8,7 @@ int main() {
     strcpy(dest, src);   // buffer overflow risk
 
     int* arr = new int[5];
-    for (int i = 0; i <= 5; i++) {
+    for (int i = 0; i < 5; i++) {
         arr[i] = i;      // out-of-bounds
     }
 
